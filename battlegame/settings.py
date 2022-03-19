@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'mainapp',
     'rest_framework',
+    'channels',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -82,7 +83,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'battlegame.wsgi.application'
-
+ASGI_APPLICATION = "battlegame.asgi.application"
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [('127.0.0.1', 6379)],
+#         },
+#     },
+# }
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
